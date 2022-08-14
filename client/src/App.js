@@ -1,8 +1,10 @@
+import { ShowTodoList } from "./components/showTodoList";
 import "./App.scss"
+
 function App() {
   return (
-    <div className="App">
-      <header>Hello World!</header>
+    <div className="app-contents">
+        <ShowTodoList />
     </div>
   );
 }
