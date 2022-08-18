@@ -9,8 +9,8 @@ function App() {
     <div className="app-contents">
       <BrowserRouter>
         <Routes>
-            <Route exact path="/" component={ShowTodoList} />
-            <Route exact path="/create-todo" component={CreateTodo} />
+            <Route exact path="/" element={<ShowTodoList/>} />
+            <Route exact path="/create-todo" element={<CreateTodo/>} />
         </Routes>
         
       </BrowserRouter>
