@@ -14,7 +14,8 @@ function TodoCard({ data, handleEdit, handleDelete }) { // updated
             </div>
 
             <div className="button-container">
-                <button className="button" name={_id} onClick={handleEdit}>                   edit
+                <button className="button" name={_id} onClick={handleEdit}>    
+                  edit
                 </button>
                 <button className="button" name={_id} onClick={handleDelete}>
                     delete
@@ -33,7 +34,7 @@ export function ShowTodoList() {
     useEffect(
         function () {
             axios
-                .get("http://localhost:8000/api/todo")
+                .get("https://shambatodo.herokuapp.com/api/todo")
                 .then((res) => {
                     console.log(res.data);
                     setTodo(res.data);
@@ -56,7 +57,7 @@ export function ShowTodoList() {
     }
 
     function handleDelete(e) { // added
-        axios.delete(`http://localhost:8000/api/todo/${e.target.name}`);
+        axios.delete(`https://shambatodo.herokuapp.com/api/todo/${e.target.name}`);
 
         setTodo((data) => {
             return data.filter((todo) => todo._id !== e.target.name);

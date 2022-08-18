@@ -13,7 +13,7 @@ export function UpdateTodo({ _id, handleClose, handleEdited }) {
 
         console.log({ _id }, { data });
 
-        axios.put(`http://localhost:8000/api/todos/${_id}`, data)
+        axios.put(`https://shambatodo.herokuapp.com/api/todos/${_id}`, data)
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);
